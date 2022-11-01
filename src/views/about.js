@@ -13,7 +13,7 @@ const About = () => {
       expansion of the Roman Empire. The sequel, Age of Empires II: The Age of
       Kings, was set in the Middle Ages, while its expansion focused partially
       on the Spanish conquest of the Aztec Empire. The subsequent three games
-      of Age of Empires III explored the early modern period, when Europe was
+      of Age of Empires III explored the early modern period, when Europe was,
       colonizing the Americas and several Asian nations were on the decline.
       Another installment, Age of Empires Online, takes a different approach
       as a free-to-play online game utilizing Games for Windows Live. A spin-off
