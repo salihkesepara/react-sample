@@ -15,7 +15,7 @@ const About = () => {
       on the Spanish conquest of the Aztec Empire. The subsequent three games
       of Age of Empires III explored the early modern period, when Europe was
       colonizing the Americas and several Asian nations were on the decline.
-      Another installment, Age of Empires Online, takes a different approach,
+      Another installment, Age of Empires Online, takes a different approach
       as a free-to-play online game utilizing Games for Windows Live. A spin-off
       game, Age of Mythology, was set in the same period as the original Age of
       Empires, but focused on mythological elements of Greek, Egyptian, and Norse
