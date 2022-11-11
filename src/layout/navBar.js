@@ -1,33 +1,26 @@
 import { useState } from 'react'
-import {
-  AppBar, Button, IconButton, Stack, Toolbar, Typography,
-  Menu, MenuItem, ListItemIcon, Hidden
-} from '@mui/material'
+import { AppBar, Button, IconButton, Stack, Toolbar, Typography, Menu, MenuItem, ListItemIcon, Hidden } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
-// icons
+// Icons
 import ApiIcon from '@mui/icons-material/Api'
 import SettingsIcon from '@mui/icons-material/Settings'
 import AccountCircle from '@mui/icons-material/AccountCircle'
 import LogoutIcon from '@mui/icons-material/Logout'
-import TranslateIcon from '@mui/icons-material/Translate'
 
 const NavBar = () => {
-  /* -------------------------------- variables ------------------------------- */
-  const { t, i18n } = useTranslation(['main', 'navBar'])
+  const { t } = useTranslation(['main'])
   const navigate = useNavigate()
   const [anchorEl, setAnchorEl] = useState(null)
-  const [lang, setLang] = useState(localStorage.getItem('i18nextLng'))
   const open = Boolean(anchorEl)
 
-  /* ----------------------------- handle methods ----------------------------- */
   const handleClickMenu = (event) => setAnchorEl(event.currentTarget)
   const handleCloseMenu = () => setAnchorEl(null)
+
   const handleHomeButton = () => navigate('/')
   const handleAboutButton = () => navigate('about')
   const handleProductButton = () => navigate('products')
-  const handleTranslateButton = () => (lang === 'tr' ? 'TR' : 'EN')
   const handleSettingsButton = () => {
     handleCloseMenu()
     setTimeout(() => {
@@ -38,16 +31,6 @@ const NavBar = () => {
     handleCloseMenu()
     localStorage.removeItem('auth')
     navigate('login')
-  }
-
-  const handleTranslate = () => {
-    if (lang === 'tr') {
-      i18n.changeLanguage('en')
-      setLang('en')
-    } else {
-      i18n.changeLanguage('tr')
-      setLang('tr')
-    }
   }
 
   return (
@@ -72,11 +55,11 @@ const NavBar = () => {
           direction="row">
           <Hidden only="xs">
             <Button color="inherit"
-              onClick={handleHomeButton}><Typography>{t('navBar:home.label')}</Typography></Button>
+              onClick={handleHomeButton}><Typography>Home</Typography></Button>
             <Button color="inherit"
-              onClick={handleAboutButton}><Typography>{t('navBar:about.label')}</Typography></Button>
+              onClick={handleAboutButton}><Typography>About</Typography></Button>
             <Button color="inherit"
-              onClick={handleProductButton}><Typography>{t('navBar:products.label')}</Typography></Button>
+              onClick={handleProductButton}><Typography>Products</Typography></Button>
           </Hidden>
           <IconButton size="large"
             color="inherit"
@@ -88,17 +71,11 @@ const NavBar = () => {
             open={open}
             onClose={handleCloseMenu}
           >
-            <MenuItem onClick={handleTranslate}>
-              <ListItemIcon>
-                <TranslateIcon />
-              </ListItemIcon>
-              <Typography>{handleTranslateButton()}</Typography>
-            </MenuItem>
             <MenuItem onClick={handleSettingsButton}>
               <ListItemIcon>
                 <SettingsIcon />
               </ListItemIcon>
-              <Typography>{t('navBar:settings.label')}</Typography>
+              <Typography>Settings</Typography>
             </MenuItem>
             <MenuItem onClick={handleLogout}>
               <ListItemIcon>

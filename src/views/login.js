@@ -15,7 +15,6 @@ const Login = ({ userActions }) => {
 
   return (
     <Container>
-      <p>{process.env.REACT_APP_CUSTOM_NODE_ENV}</p>
       <button onClick={handleSuccessLogin}>Login</button>
     </Container>
   )

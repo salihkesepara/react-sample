@@ -16,5 +16,5 @@ export const toastSettings = {
   autoClose: 3000,
   limit: 3,
   theme: 'light',
-  newestOnTop: true
+  newstOnTop: true
 }

@@ -1,3 +1,4 @@
+
 /* eslint-disable no-unused-vars */
 import { Container } from '@mui/material'
 import { useEffect } from 'react'
@@ -9,11 +10,11 @@ const Users = () => {
   const activeUsers = searchParams.get('filter')
   const country = searchParams.get('country')
 
-  useEffect(() => {
-    // console.log('userId:', userId)
-    // console.log('activeUsers:', activeUsers)
-    // console.log('country:', country)
-  })
+  // useEffect(() => {
+  //   console.log('userId:', userId)
+  //   console.log('activeUsers:', activeUsers)
+  //   console.log('country:', country)
+  // })
 
   return (
     <Container>

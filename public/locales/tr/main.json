@@ -1,6 +1,5 @@
 {
   "login.button": "Giriş",
   "signIn.button": "Kaydol",
-  "logout.button": "Çıkış",
-  "home.label": "Ana Sayfa"
+  "logout.button": "Çıkış"
 }

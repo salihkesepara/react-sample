@@ -1,6 +1,5 @@
 {
   "login.button": "Login",
   "signIn.button": "Sign In",
-  "logout.button": "Logout",
-  "home.label": "Home"
+  "logout.button": "Logout"
 }
